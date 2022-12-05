@@ -1,0 +1,28 @@
+{
+  "name": "proyecto_ciclo4_grupo6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "project": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoniquitaMendivelso/Proyecto_ciclo4_grupo6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MoniquitaMendivelso/Proyecto_ciclo4_grupo6/issues"
+  },
+  "homepage": "https://github.com/MoniquitaMendivelso/Proyecto_ciclo4_grupo6#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

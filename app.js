@@ -22,4 +22,3 @@ mongoose.connect("mongodb+srv://walletapp:walletapp@clusterwalletapp.ryjayfo.mon
 //Middleware
 app.use(express.json())
 app.use("/user", userRouter)
-app.use("/test", testRouter)
