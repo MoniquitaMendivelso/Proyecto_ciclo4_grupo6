@@ -1,11 +1,11 @@
-import userModel from "../models/userModel.js"
+import userModel from "../models/reservationModel.js"
 
 //CRUD
 //CREATE
-export async function createUser(req, res){
+export async function createReservation(req, res){
     //IMPLEMENTACION AQUI
     // const {nombre, edad, ciudad} = req.body.usuario
-    const usuario = req.body.usuario
+    const reservation = req.body.reservation
 
     // if (usuario == null) {
     //     res.status(400).json({
@@ -17,7 +17,7 @@ export async function createUser(req, res){
     let documento
 
     try {
-        documento = await userModel.create(usuario)
+        documento = await reservationModel.create(reservation)
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -27,7 +27,7 @@ export async function createUser(req, res){
 }
 
 //READ
-export async function readUser(req, res){
+export async function readReservation(req, res){
     //IMPLEMENTACION AQUI
     const id = req.params.id
 
@@ -44,7 +44,7 @@ export async function readUser(req, res){
 }
 
 //UPDATE
-export async function updateUser(req, res){
+export async function updateReservation(req, res){
 
     //IMPLEMENTACION AQUI
     //1) findOneAndUpdate
@@ -56,7 +56,7 @@ export async function updateUser(req, res){
     let documento = null
 
     try {
-        documento = await userModel.updateOne({"_id":id},updates)
+        documento = await reservationModel.updateOne({"_id":id},updates)
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -66,14 +66,14 @@ export async function updateUser(req, res){
 }
 
 //DELETE
-export async function deleteUser(req, res){
+export async function deleteReservation(req, res){
     //IMPLEMENTACION AQUI
     const id = req.body.id
 
     let documento = null
 
     try {
-        documento = await userModel.deleteOne({"_id":id})
+        documento = await userReservation.deleteOne({"_id":id})
     } catch (error) {
         res.status(400).json(error.message)
         return;

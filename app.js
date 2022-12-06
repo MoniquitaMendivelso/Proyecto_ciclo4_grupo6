@@ -2,7 +2,7 @@ import express from "express"
 import mongoose from "mongoose";
 import testRouter from "./routes/testRouter.js";
 import userRouter from "./routes/userRouter.js";
-
+import reservationRouter from "./routes/reservationRouter.js";
 const app = express();
 
 const port = process.env.PORT || 8080
@@ -23,3 +23,4 @@ mongoose.connect("mongodb+srv://walletapp:walletapp@clusterwalletapp.ryjayfo.mon
 app.use(express.json())
 app.use("/user", userRouter)
 app.use("/test", testRouter)
+app.use("/reservation", reservationRouter)
