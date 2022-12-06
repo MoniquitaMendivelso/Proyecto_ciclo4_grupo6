@@ -1,11 +1,11 @@
-import userModel from "../models/userModel.js"
+import activityModel from "../models/activityModel.js"
 
 //CRUD
 //CREATE
-export async function createUser(req, res){
+export async function createActivity(req, res) {
     //IMPLEMENTACION AQUI
     // const {nombre, edad, ciudad} = req.body.usuario
-    const usuario = req.body.usuario
+    const activity = req.body.activity
 
     // if (usuario == null) {
     //     res.status(400).json({
@@ -17,7 +17,7 @@ export async function createUser(req, res){
     let documento
 
     try {
-        documento = await userModel.create(usuario)
+        documento = await activityModel.create(activity)
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -26,15 +26,13 @@ export async function createUser(req, res){
     res.status(201).json(documento)
 }
 
-//READ
-export async function readUser(req, res){
+//READ ALL
+export async function readAllActivity(req, res) {
     //IMPLEMENTACION AQUI
-    const id = req.params.id
-
     let documento
 
     try {
-        documento = await userModel.findOne({"_id":id})
+        documento = await activityModel.find()
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -42,14 +40,16 @@ export async function readUser(req, res){
 
     res.status(200).json(documento)
 }
-//READ ALL
-export async function readAllUser(req, res) {
+
+//READ
+export async function readActivity(req, res) {
     //IMPLEMENTACION AQUI
- 
+    const id = req.params.id
+
     let documento
 
     try {
-        documento = await userModel.find()
+        documento = await activityModel.findOne({ "_id": id })
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -59,7 +59,7 @@ export async function readAllUser(req, res) {
 }
 
 //UPDATE
-export async function updateUser(req, res){
+export async function updateActivity(req, res) {
 
     //IMPLEMENTACION AQUI
     //1) findOneAndUpdate
@@ -71,7 +71,7 @@ export async function updateUser(req, res){
     let documento = null
 
     try {
-        documento = await userModel.updateOne({"_id":id},updates)
+        documento = await activityModel.updateOne({ "_id": id }, updates, { runValidators: true })
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -81,14 +81,14 @@ export async function updateUser(req, res){
 }
 
 //DELETE
-export async function deleteUser(req, res){
+export async function deleteActivity(req, res) {
     //IMPLEMENTACION AQUI
     const id = req.body.id
 
     let documento = null
 
     try {
-        documento = await userModel.deleteOne({"_id":id})
+        documento = await activityModel.deleteOne({ "_id": id })
     } catch (error) {
         res.status(400).json(error.message)
         return;

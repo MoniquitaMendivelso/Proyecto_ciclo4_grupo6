@@ -1,5 +1,5 @@
 import express from "express"
-import { createUser, deleteUser, readUser, updateUser } from "../controllers/userController.js"
+import { createUser, deleteUser, readUser,readAllUser, updateUser } from "../controllers/userController.js"
 
 const userRouter = express.Router()
 
@@ -12,6 +12,11 @@ userRouter.post("/", (req, res) => {
 //LEER: GET
 userRouter.get("/:id", (req, res) => {
     readUser(req, res)
+})
+
+//LEER: GET
+userRouter.get("/", (req, res) => {
+    readAllUser(req, res)
 })
 
 //ACTUALIZAR: PUT / PATCH
