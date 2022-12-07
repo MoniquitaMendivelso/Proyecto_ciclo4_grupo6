@@ -1,4 +1,4 @@
-import roomModel from "../models/roomModel";
+import roomModel from "../models/roomModel.js";
 
 // CRUD
 

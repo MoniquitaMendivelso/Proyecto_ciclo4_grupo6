@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import roomRauter from "./routes/roomRauter.js";
 import userRouter from "./routes/userRouter.js";
 
 const app = express();
@@ -23,3 +24,4 @@ mongoose.connect("mongodb+srv://ProjectDB:896534@clusterproject.op6nii7.mongodb.
 //Middleware
 app.use(express.json());
 app.use("/user", userRouter);
+app.use("/room", roomRauter);
