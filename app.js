@@ -1,7 +1,7 @@
 import express from "express"
 import mongoose from "mongoose";
 import testRouter from "./routes/testRouter.js";
-import userRouter from "./routes/userRouter.js";
+import ServicesRouter from "./routes/ServicesRouter.js";
 
 const app = express();
 
@@ -11,7 +11,9 @@ app.listen(port, ()=>{
     console.log("El servidor se está ejecutando correctamente.");
 })
 
-mongoose.connect("mongodb+srv://walletapp:walletapp@clusterwalletapp.ryjayfo.mongodb.net/wallet-app?retryWrites=true&w=majority", (err)=>{
+mongoose.set('strictQuery', true);
+
+mongoose.connect("mongodb+srv://ClusterYamile:Nina2012&@clusterhotel.7poqmno.mongodb.net/ProyecHotel?retryWrites=true&w=majority", (err)=>{
     if (err) {
         console.log(err);
     } else {
@@ -21,5 +23,5 @@ mongoose.connect("mongodb+srv://walletapp:walletapp@clusterwalletapp.ryjayfo.mon
 
 //Middleware
 app.use(express.json())
-app.use("/user", userRouter)
-app.use("/test", testRouter)
+app.use("/services", ServicesRouter)
+//app.use("/test", testRouter)
