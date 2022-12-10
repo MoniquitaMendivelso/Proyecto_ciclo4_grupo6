@@ -5,13 +5,15 @@ import userRouter from "./routes/userRouter.js";
 
 const app = express();
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 
 app.listen(port, ()=>{
     console.log("El servidor se está ejecutando correctamente.");
 })
 
-mongoose.connect("mongodb+srv://walletapp:walletapp@clusterwalletapp.ryjayfo.mongodb.net/wallet-app?retryWrites=true&w=majority", (err)=>{
+mongoose.set('strictQuery', true);
+
+mongoose.connect("mongodb+srv://Proy_Ciclo4UNAB:UNAB2022@clusterproyciclo4unab.ehorasp.mongodb.net/Hotel?retryWrites=true&w=majority", (err)=>{
     if (err) {
         console.log(err);
     } else {
@@ -22,4 +24,4 @@ mongoose.connect("mongodb+srv://walletapp:walletapp@clusterwalletapp.ryjayfo.mon
 //Middleware
 app.use(express.json())
 app.use("/user", userRouter)
-app.use("/test", testRouter)
+//app.use("/test", testRouter)

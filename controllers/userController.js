@@ -29,12 +29,12 @@ export async function createUser(req, res){
 //READ
 export async function readUser(req, res){
     //IMPLEMENTACION AQUI
-    const id = req.params.id
+    const cedula = req.params.id
 
     let documento
 
     try {
-        documento = await userModel.findOne({"_id":id})
+        documento = await userModel.findOne({"Cedula":cedula})
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -50,13 +50,13 @@ export async function updateUser(req, res){
     //1) findOneAndUpdate
     //2) findOne ... Update
 
-    const id = req.params.id
+    const cedula = req.params.id
     const updates = req.body.updates
 
     let documento = null
 
     try {
-        documento = await userModel.updateOne({"_id":id},updates)
+        documento = await userModel.updateOne({"Cedula":cedula},updates)
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -68,12 +68,12 @@ export async function updateUser(req, res){
 //DELETE
 export async function deleteUser(req, res){
     //IMPLEMENTACION AQUI
-    const id = req.body.id
+    const cedula = req.body.Cedula
 
     let documento = null
 
     try {
-        documento = await userModel.deleteOne({"_id":id})
+        documento = await userModel.deleteOne({"Cedula":cedula})
     } catch (error) {
         res.status(400).json(error.message)
         return;

@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 
 const userModel = mongoose.Schema({
-    "nombre": {type:String, required:true},
-    "edad":{type:Number, required:true},
-    "ciudad":{type:String, required:true},
-    "correo": {type:String, required:true}
+    "Nombre": {type:String, required:true},
+    "Cedula":{type:Number, required:true},
+    "Genero":{type:String, required:true},
+    "Edad":{type:Number, required:true},
+    "Telefono":{type:Number, required:true},
+    "Email": {type:String, required:true}
 })
 
 export default mongoose.model("users", userModel)
