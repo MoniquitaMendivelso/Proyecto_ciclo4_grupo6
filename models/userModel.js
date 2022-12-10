@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const userModel = mongoose.Schema({
     "Nombre": {type:String, required:true},
-    "Cedula":{type:Number, required:true},
+    "Cedula":{type:Number, required:true, unique:true},
     "Genero":{type:String, required:true},
     "Edad":{type:Number, required:true},
     "Telefono":{type:Number, required:true},
