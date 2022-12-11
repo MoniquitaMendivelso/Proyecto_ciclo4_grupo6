@@ -1,11 +1,10 @@
 import express from "express"
-import { createReservation, deleteReservation, readReservation, updateReservation } from "../controllers/userController.js"
-
+import { createReservation, deleteReservation, readReservation, updateReservation } from "../controllers/reservationController.js";
 const reservationRouter = express.Router()
 
 //CRUD
 //CREAR: POST
-eservationRouter.post("/", (req, res) => {
+reservationRouter.post("/", (req, res) => {
     createReservation(req, res)
 })
 

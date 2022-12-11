@@ -1,4 +1,4 @@
-import userModel from "../models/reservationModel.js"
+import reservationModel from "../models/reservationModel.js"
 
 //CRUD
 //CREATE
@@ -34,7 +34,7 @@ export async function readReservation(req, res){
     let documento
 
     try {
-        documento = await userModel.findOne({"_id":id})
+        documento = await reservationModel.findOne({"_id":id})
     } catch (error) {
         res.status(400).json(error.message)
         return;
@@ -73,7 +73,7 @@ export async function deleteReservation(req, res){
     let documento = null
 
     try {
-        documento = await userReservation.deleteOne({"_id":id})
+        documento = await reservationModel.deleteOne({"_id":id})
     } catch (error) {
         res.status(400).json(error.message)
         return;
