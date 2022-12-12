@@ -37,7 +37,7 @@ export async function updateRoom(req, res){
     let documento = null;
 
     try {
-        documento = await roomModel.updateOne({"_id":id, update})
+        documento = await roomModel.updateOne({"_id":id}, update)
     } catch (error) {
         res.status(400).json(error.message)
         return;
