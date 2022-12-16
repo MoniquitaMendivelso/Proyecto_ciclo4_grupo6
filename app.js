@@ -1,5 +1,7 @@
 import express from "express"
 import mongoose from "mongoose";
+import AdminModel from "./models/AdminModel.js";
+import AdminRouter from "./routes/AdminRouter.js";
 import testRouter from "./routes/testRouter.js";
 import userRouter from "./routes/userRouter.js";
 
@@ -24,4 +26,5 @@ mongoose.connect("mongodb+srv://Proy_Ciclo4UNAB:UNAB2022@clusterproyciclo4unab.e
 //Middleware
 app.use(express.json())
 app.use("/user", userRouter)
+app.use("/login", AdminRouter)
 //app.use("/test", testRouter)
