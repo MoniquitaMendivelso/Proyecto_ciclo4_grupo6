@@ -11,7 +11,7 @@ roomRauter.post("/POST", (req, res) => {
 });
 
 //GET
-roomRauter.get("/GET", (req, res) => {
+roomRauter.get("/GET/:id", (req, res) => {
     readRoom(req, res)
 });
 

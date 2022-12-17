@@ -17,7 +17,7 @@ export async function createRoom(req, res){
 };
 
 export async function readRoom(req, res){
-    const id = req.body.id;
+    const id = req.params.id;
 
     let documento;
 
