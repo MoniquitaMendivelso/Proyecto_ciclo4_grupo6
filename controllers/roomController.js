@@ -22,7 +22,7 @@ export async function readRoom(req, res){
     let documento;
 
     try {
-        documento = await roomModel.findOne({"_id":id})
+        documento = await roomModel.find({"_id":id})
     } catch (error) {
         res.status(400).json(error.message)
         return;
