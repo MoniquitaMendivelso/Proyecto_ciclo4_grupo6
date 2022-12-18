@@ -5,9 +5,36 @@ import Gap from "./Gap";
 import Button from "./forms/Button";
 
 export default function Login() {
-  function onSubmit(e) {
+  async function onSubmit(e) {
     e.preventDefault();
-    alert("usr: " + user + " password: " + password);
+    //alert("usr: " + user + " password: " + password);
+    const res = await fetch("http://localhost:3001/login/log", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify({
+        Usuario: user,
+        Password: password,
+      }),
+    });
+
+    const data = await res.json();
+
+    console.log(res.status);
+    //console.log(data.token);
+    const token = data.token;
+    console.log("usr: " + user + " password: " + password + " token: " + token);
+    //alert("token: " + token);
+    switch (res.status) {
+      case 200:
+        alert("acceso autorizado " /*+ token*/);
+        break;
+      case 401:
+        alert("usuario y/o clave incorrecta: " /*+ token*/);
+        break;
+    }
   }
 
   const [user, setUser] = useState("");
