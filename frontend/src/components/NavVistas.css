@@ -1,0 +1,18 @@
+.list {
+    text-align: center;
+    flex-direction: row;
+    font-size: 16px;
+    gap: 20px;
+}
+
+.link {
+    margin-left: 12px;
+}
+
+b {
+    color: black;
+}
+
+b:hover { 
+    color: red;
+}
