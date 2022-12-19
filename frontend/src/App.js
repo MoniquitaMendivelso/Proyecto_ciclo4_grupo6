@@ -7,7 +7,7 @@ import Reservasiones from './views/room/Reservasiones';
 
 export default function App(){
     return(
-        <div>
+        <div className='container'>
             <Nav></Nav>
             <Routes>
                 <Route path="/" element={<Home></Home>}></Route>

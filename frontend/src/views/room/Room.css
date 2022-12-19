@@ -1,5 +1,8 @@
 .room {
     padding: 10px 20px ;
+    width: 60%;
+    display: flex;
+    justify-content: center;
 }
 
 .tittle {
