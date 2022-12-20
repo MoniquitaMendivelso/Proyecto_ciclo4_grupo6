@@ -5,13 +5,21 @@ import DataRoom from "./DataRoom";
 export default function Reservasiones(){
 
     async function fetchData(id){
-        const res = await fetch("http://localhost:8080/room/GET/" + id)
-        const documents = await res.json()
-        setdocuments(documents)
+        var url = 'https://example.com/profile';
+var data = {username: 'example'};
+
+fetch(url, {
+  method: 'POST', // or 'PUT'
+  body: JSON.stringify(data), // data can be `string` or {object}!
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', response));
     }
 
-    const [documents, setdocuments] = useState([]);
-
+    
     useEffect(() => {
         fetchData(2)
     }, []);
