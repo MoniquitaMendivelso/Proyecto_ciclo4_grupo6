@@ -12,6 +12,8 @@ app.listen(port, () => {
     console.log("El servidor se está ejecutando correctamente.");
 });
 
+mongoose.set('strictQuery', false)
+
 mongoose.connect("mongodb+srv://ProjectDB:896534@clusterproject.op6nii7.mongodb.net/projectdb?retryWrites=true&w=majority",
     (err) => {
         if (err) {

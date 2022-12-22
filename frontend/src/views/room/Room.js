@@ -4,8 +4,8 @@ import DataRoom from "./DataRoom";
 
 export default function Room(){
 
-    async function fetchData(id){
-        const res = await fetch("http://localhost:8080/room/GET/" + id)
+    async function fetchData(size){
+        const res = await fetch("http://localhost:8080/room/GET/" + size)
         const documents = await res.json()
         setdocuments(documents)
     }
@@ -13,7 +13,7 @@ export default function Room(){
     const [documents, setdocuments] = useState([]);
 
     useEffect(() => {
-        fetchData(2)
+        fetchData("mediana")
     }, []);
 
     return(

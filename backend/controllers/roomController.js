@@ -17,12 +17,12 @@ export async function createRoom(req, res){
 };
 
 export async function readRoom(req, res){
-    const id = req.params.id;
+    const { size } = req.params;
 
     let documento;
 
     try {
-        documento = await roomModel.find({"_id":id})
+        documento = await roomModel.find({tamaño: size})
     } catch (error) {
         res.status(400).json(error.message)
         return;

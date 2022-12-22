@@ -7,10 +7,10 @@ export default function Nav(){
         <nav className="nav">
             <div className="list flex">
                 <div className="link">
-                    <Link to="/"><b>Home</b></Link>
+                    <Link to="/"><b className="nav-tittle">Home</b></Link>
                 </div>
                 <div className="link-room" >
-                    <Link to="/Room"><b>Rooms</b></Link>
+                    <Link to="/Room"><b className="nav-tittle">Rooms</b></Link>
                 </div>
             </div>
         </nav>

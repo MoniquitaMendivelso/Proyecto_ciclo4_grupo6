@@ -9,10 +9,10 @@
     margin-left: 12px;
 }
 
-b {
+.nav-tittle {
     color: black;
 }
 
-b:hover { 
+.nav-tittle:hover { 
     color: red;
 }
