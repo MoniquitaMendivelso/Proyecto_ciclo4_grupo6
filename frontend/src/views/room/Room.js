@@ -19,6 +19,9 @@ export default function Room(){
     return(
         <section className="room">
             <h2>Vista ROOM</h2>
+            <div className="input-room">
+            <input className="input" placeholder="busca por tamaño"></input>
+            </div>
             <div className="container">
                 <p className="tittle">Habitaciones</p>
                 <div className="block-room">
