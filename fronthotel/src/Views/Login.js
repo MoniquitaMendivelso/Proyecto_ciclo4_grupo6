@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Card from "./Card";
-import Input from "./forms/Input";
-import Gap from "./Gap";
-import Button from "./forms/Button";
+import Card from "../components/Card";
+import Input from "../components/forms/Input";
+import Gap from "../components/Gap";
+import Button from "../components/forms/Button";
 
 export default function Login() {
   async function onSubmit(e) {

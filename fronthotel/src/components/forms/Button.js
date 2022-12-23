@@ -6,9 +6,9 @@ function alerta(mensaje) {
 }
 
 export default function Button(props) {
-  const { children, onClick, type } = props;
+  const { id, children, onClick, type, onSubmit } = props;
   return (
-    <button className="button" type={type} onClick={onClick}>
+    <button id={id} className="button" type={type} onClick={onClick} onSubmit={onSubmit}>
       {children}
     </button>
   );

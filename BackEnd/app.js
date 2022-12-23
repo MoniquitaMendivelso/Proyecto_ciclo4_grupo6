@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import AdminModel from "./models/AdminModel.js";
 import AdminRouter from "./routes/AdminRouter.js";
-import testRouter from "./routes/testRouter.js";
+import ServicesRouter from "./routes/ServicesRouter.js";
 import userRouter from "./routes/userRouter.js";
 import Cors from "cors";
 
@@ -37,4 +37,5 @@ app.use(
 
 app.use("/user", userRouter);
 app.use("/login", AdminRouter);
+app.use("/services", ServicesRouter)
 //app.use("/test", testRouter)

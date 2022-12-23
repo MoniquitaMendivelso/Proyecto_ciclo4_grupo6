@@ -17,3 +17,8 @@
   padding: 0.2rem;
   border-style: hidden;
 }
+
+.ButtonRadio {
+  border-radius: 0.5rem;
+  border-color: blue;
+}

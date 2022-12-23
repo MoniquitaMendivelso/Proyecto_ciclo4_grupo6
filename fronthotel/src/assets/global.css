@@ -10,3 +10,10 @@
 body {
   background-color: rgb(179, 208, 197);
 }
+
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+

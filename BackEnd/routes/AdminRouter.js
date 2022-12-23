@@ -1,5 +1,5 @@
 import express from "express"
-import { createAdmin, deleteAdmin, readAdmin, updateAdmin, loginAdmin, verificarAdmin } from "../controllers/AdminController.js"
+import { createAdmin, deleteAdmin, readAdmin, readAdminAll, updateAdmin, loginAdmin, verificarAdmin } from "../controllers/AdminController.js"
 
 
 const AdminRouter = express.Router()
@@ -15,6 +15,11 @@ AdminRouter.post("/log", (req, res) => {
 AdminRouter.get("/verificar", (req, res) => {
     verificarAdmin(req, res)
 })
+// leer todos los admins
+AdminRouter.get("/All", (req, res) => {
+    // console.log("user router"+cedula);
+     readAdminAll(req, res)
+ })
 //LEER: GET
 AdminRouter.get("/", (req, res) => {
    // console.log("user router"+cedula);

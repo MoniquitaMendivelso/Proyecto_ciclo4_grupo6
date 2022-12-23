@@ -95,6 +95,24 @@ export async function loginAdmin(req, res) {
   //res.status(200).json(documento)
 }
 
+
+//LEER TODOS LOS USUARIOS
+export async function readAdminAll(req, res) {
+  //IMPLEMENTACION AQUI
+  const Usuario = req.body.Usuario;
+
+  let documento;
+
+  try {
+    documento = await AdminModel.find({});
+  } catch (error) {
+    res.status(400).json(error.message);
+    return;
+  }
+
+  res.status(200).json(documento);
+}
+
 //READ
 export async function readAdmin(req, res) {
   //IMPLEMENTACION AQUI
