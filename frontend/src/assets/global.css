@@ -1,0 +1,34 @@
+body * {
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 6px;
+}
+
+.flex {
+    display: flex;
+}
+
+.nav {
+    margin-bottom: 8px;
+    background-color: lightgrey;
+    border-radius: 8px;
+    width: auto;
+    padding: 4px;
+}
+
+.container{
+    text-align: center;
+    align-items: center;
+    padding: 5px 5px;
+    max-width: auto;
+    border-radius: 6px;
+    margin-top: 35px;
+    width: auto;
+}
