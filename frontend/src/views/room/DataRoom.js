@@ -10,13 +10,14 @@ export default function DataRoom(props) {
 
     return(
         <div>
-            <p>apartado informacion de la habitacion</p>
+            <p>Apartado informacion de la habitacion: <b className="numhabitacion">{numHabitacion}</b></p>
             <div className="block-buttons">
-                <p>{numHabitacion}</p>
-                <p>{disposicion}</p>
-                <p>{tamaño}</p>
-                <p>{descripcion}</p>
-                <p>{costo}</p>
+                <h3>Disposicion</h3>
+                <p className="data">{disposicion}</p>
+                <p className="data">La habitacion es {tamaño}</p>
+                <h3>Descripcion</h3>
+                <p className="data">{descripcion}</p>
+                <p className="data-costo">Precio {costo}$</p>
                 <Button>editar</Button>
                 <Button>eliminar</Button>
             </div>
