@@ -38,4 +38,5 @@ app.use(
 app.use("/user", userRouter);
 app.use("/login", AdminRouter);
 app.use("/services", ServicesRouter)
+app.use("/room", roomRauter);
 //app.use("/test", testRouter)
