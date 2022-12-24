@@ -4,6 +4,7 @@ import AdminModel from "./models/AdminModel.js";
 import AdminRouter from "./routes/AdminRouter.js";
 import ServicesRouter from "./routes/ServicesRouter.js";
 import userRouter from "./routes/userRouter.js";
+import roomRauter from "./routes/roomRauter.js"
 import Cors from "cors";
 
 const app = express();

@@ -3,7 +3,7 @@ import roomModel from "../models/roomModel.js";
 // CRUD
 
 export async function createRoom(req, res){
-    const room = req.body.room;
+    const room = req.body;
 
     let documento;
 
@@ -22,7 +22,7 @@ export async function readRoom(req, res){
     let documento;
 
     try {
-        documento = await roomModel.find({tamaño: size})
+        documento = await roomModel.find({})
     } catch (error) {
         res.status(400).json(error.message)
         return;

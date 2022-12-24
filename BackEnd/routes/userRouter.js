@@ -10,7 +10,7 @@ userRouter.post("/", (req, res) => {
 })
 
 //LEER: GET
-userRouter.get("/:id", (req, res) => {
+userRouter.get("/", (req, res) => {
    // console.log("user router"+cedula);
     readUser(req, res)
 })

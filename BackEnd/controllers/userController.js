@@ -3,45 +3,34 @@ import userModel from "../models/userModel.js"
 //CRUD
 //CREATE
 export async function createUser(req, res){
-    //IMPLEMENTACION AQUI
-    // const {nombre, edad, ciudad} = req.body.usuario
-    const usuario = req.body.usuario
+    const usuario = req.body;
 
-    // if (usuario == null) {
-    //     res.status(400).json({
-    //         "error": "Falta el objeto usuario en el cuerpo de la petición."
-    //     })
-    //     return
-    // }
-
-    let documento
+    let documento;
 
     try {
         documento = await userModel.create(usuario)
     } catch (error) {
         res.status(400).json(error.message)
-        return;
+
     }
 
     res.status(201).json(documento)
-}
+};
 
 //READ
 export async function readUser(req, res){
-    //IMPLEMENTACION AQUI
-    const cedula = req.params.id
-
-    let documento
+    let documento;
 
     try {
-        documento = await userModel.findOne({"Cedula":cedula})
+        documento = await userModel.find({})
     } catch (error) {
         res.status(400).json(error.message)
         return;
     }
 
     res.status(200).json(documento)
-}
+};
+
 
 //UPDATE
 export async function updateUser(req, res){

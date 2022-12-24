@@ -26,7 +26,7 @@ function AdminUser() {
   //let cantidadAdmin = data.length;
   //console.log(data[0].Usuario+" dsfdsf")
 
-  const ol = document.createElement("ol");
+  const ol = document.createElement("ul");
   ol.id="listaAdmin"
   document.getElementById("listado").appendChild(ol) 
 
@@ -36,12 +36,12 @@ function AdminUser() {
     
     const li = document.createElement("li");
     li.id = data[cont].Usuario
-    li.textContent = "     "+data[cont].Usuario
+    li.textContent = data[cont].Usuario
     li.name = "admins"
     const RadioButton = document.createElement("input");
     RadioButton.id = data[cont].Usuario;
     RadioButton.type= "radio"
-    if (user==data[cont].Usuario)
+    if (user===data[cont].Usuario)
     {
       RadioButton.checked= true
     }else{
