@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import Input from "../components/forms/Input";
 import Gap from "../components/Gap";
 import Button from "../components/forms/Button";
-import API_URL from "./api"
+import {API_URL} from "./api";
 export default function Login() {
   async function onSubmit(e) {
     e.preventDefault();

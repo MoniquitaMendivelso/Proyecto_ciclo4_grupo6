@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Room.css";
 import DataRoom from "./DataRoom";
-import API_URL from "../api"
+import {API_URL} from "../api"
 
 export default function Room(){
 
