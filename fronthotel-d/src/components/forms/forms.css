@@ -1,0 +1,24 @@
+.button {
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 5rem;
+  border-color: rgb(13, 13, 17);
+  color: rgb(43, 16, 195);
+  background-color: rgb(73, 183, 183);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(185, 233, 217);
+}
+
+.input {
+  text-align: center;
+  padding: 0.2rem;
+  border-style: hidden;
+}
+
+.ButtonRadio {
+  border-radius: 0.5rem;
+  border-color: blue;
+}

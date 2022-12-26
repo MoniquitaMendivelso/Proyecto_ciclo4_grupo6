@@ -1,0 +1,5 @@
+.card {
+  background-color: rgb(175, 166, 187);
+  display: inline-flex;
+    /*gap: 1rem;*/
+}

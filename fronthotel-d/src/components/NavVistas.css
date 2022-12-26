@@ -1,0 +1,19 @@
+.list {
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 16px;
+    gap: 20px;
+}
+
+.link {
+    margin-left: 12px;
+}
+
+.nav-tittle {
+    color: black;
+}
+
+.nav-tittle:hover { 
+    color: red;
+}
