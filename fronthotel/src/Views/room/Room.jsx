@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Room.css";
 import DataRoom from "./DataRoom";
+import API_URL from "../api"
 
 export default function Room(){
 
     async function fetchData(){
-        const res = await fetch("http://localhost:3001/room/GET")
+        const res = await fetch(API_URL+"/room/GET")
         const documents = await res.json()
         setdocuments(documents)
     }

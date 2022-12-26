@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Users.css";
 import DataUsers from "./dataUsers.jsx";
+import API_URL from "../api"
 
 export default function User(){
 
     async function fetchData(){
-        const res = await fetch("http://localhost:3001/user/")
+        const res = await fetch(API_URL+"/user/")
         const documents = await res.json()
         setdocuments(documents)
     }

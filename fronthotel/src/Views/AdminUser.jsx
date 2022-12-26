@@ -5,12 +5,13 @@ import ButtonRadio from "../components/forms/ButtonRadio";
 import Gap from "../components/Gap";
 import React, { useState } from "react";
 import Input from "../components/forms/Input";
+import API_URL from "./api"
 
 function AdminUser() {
 
   async function  llenarAdmins(e){
     //e.preventDefault();
-    const res = await fetch("http://localhost:3001/login/All", {
+    const res = await fetch(API_URL + "/login/All", {
     method: "GET",
     mode: "cors",
     headers: {
