@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Users.css";
 import DataUsers from "./dataUsers.jsx";
-import {API_URL} from "../api"
+import {API_URL} from "../../Services/api"
 
 export default function User(){
 
