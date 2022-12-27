@@ -13,7 +13,7 @@ export default function App() {
   return (
 
     <Routes>
-        <Route element={<Navbar />}></Route>
+        <Route element={<Nav/>}></Route>
         <Route path="/Login" element={<Login></Login>}></Route>
         <Route path="/AdminUser" element={<AdminUser></AdminUser>}></Route>
         <Route path="/Users" element={<Users></Users>}></Route>
