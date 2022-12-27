@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../components/forms/Button';
-import Gap from '../components/Gap';
+import Gap from '../components/forms/Gap';
 
 
 function Services() {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Card from "../components/Card";
+import Card from "../components/forms/Card";
 import Input from "../components/forms/Input";
-import Gap from "../components/Gap";
+import Gap from "../components/forms/Gap";
 import Button from "../components/forms/Button";
 import {API_URL} from "../Services/api";
 export default function Login() {
@@ -10,7 +10,7 @@ export default function Login() {
     //alert("usr: " + user + " password: " + password);
     const res = await fetch(API_URL+"/login/log", {
       method: "POST",
-      mode: "cors",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },

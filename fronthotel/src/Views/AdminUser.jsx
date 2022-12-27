@@ -1,8 +1,8 @@
 //*import React from "react";
-import Card from "../components/Card";
+import Card from "../components/forms/Card";
 import Button from "../components/forms/Button";
 import ButtonRadio from "../components/forms/ButtonRadio";
-import Gap from "../components/Gap";
+import Gap from "../components/forms/Gap";
 import React, { useState } from "react";
 import Input from "../components/forms/Input";
 import {API_URL} from "../Services/api"
