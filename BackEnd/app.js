@@ -32,7 +32,7 @@ mongoose.connect(
 app.use(express.json());
 app.use(
   Cors({
-    origin: process.env.APP_URL,
+    origin: process.env.APP_URL+"3000",
     // "http://localhost:3000" //direccion front para permisos
   })
 );
