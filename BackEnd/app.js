@@ -6,20 +6,22 @@ import ServicesRouter from "./routes/ServicesRouter.js";
 import userRouter from "./routes/userRouter.js";
 import roomRauter from "./routes/roomRauter.js"
 import Cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
-
 const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
-  console.log("El servidor se está ejecutando correctamente.");
+  console.log("El servidor se está ejecutando correctamente." + port);
 });
 
-mongoose.set("strictQuery", true);
+const uri = process.env.URI
 
-mongoose.connect(
-  "mongodb+srv://Proy_Ciclo4UNAB:UNAB2022@clusterproyciclo4unab.ehorasp.mongodb.net/Hotel?retryWrites=true&w=majority",
-  (err) => {
+mongoose.set("strictQuery", true);
+// @ts-ignore
+mongoose.connect(uri, (err) => {
     if (err) {
       console.log(err);
     } else {
@@ -28,8 +30,6 @@ mongoose.connect(
   }
 );
 
-//Middleware
-app.use(express.json());
 app.use(
   Cors({
     origin: process.env.APP_URL,
@@ -37,9 +37,11 @@ app.use(
   })
 );
 
+//Middleware
+app.use(express.json());
+
 app.use("/user", userRouter);
 app.use("/login", AdminRouter);
 app.use("/services", ServicesRouter)
 app.use("/room", roomRauter);
 app.use("/", (req, res) => res.json("Bienvenido!"));
-//app.use("/test", testRouter)
