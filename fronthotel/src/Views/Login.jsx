@@ -10,7 +10,7 @@ export default function Login() {
     //alert("usr: " + user + " password: " + password);
     const res = await fetch(API_URL+"/login/log", {
       method: "POST",
-      mode: "no-cors",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },
